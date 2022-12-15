@@ -82,7 +82,7 @@ namespace UP_12_Console
             public static explicit operator Rectangle(string s)
             {
                 int a, b;
-                Regex regex = new Regex(@"[1-9]+");
+                Regex regex = new Regex(@"[0-9]+");
                 MatchCollection matches = regex.Matches(s);
                 if (matches.Count > 2) throw new Exception("Строка содержит больше двух определений сторон прямоугольника!");
                 else if (matches.Count < 2) throw new Exception("Строка содержит меньше двух определений сторон прямоугольника!");
